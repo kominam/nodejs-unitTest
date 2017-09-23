@@ -1,0 +1,30 @@
+{
+  "name": "unittest",
+  "version": "1.0.0",
+  "description": "nodejs unit test",
+  "main": "index.js",
+  "scripts": {
+    "compile": "./node_modules/.bin/babel src --out-dir dist --ignore '**/*.test.js'",
+    "test": "mocha src/test/*.test.js --compilers js:babel-core/register",
+    "coverage": "nyc --reporter=html npm test"
+  },
+  "author": "kominam",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "chalk": "^2.1.0",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12",
+    "nyc": "^11.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "sinon": "^3.3.0",
+    "supertest": "^3.0.0"
+  }
+}
